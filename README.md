@@ -22,6 +22,6 @@ Grab and configure this project using `okta start quarkus`
 
 For more details on how to build an application with Okta and Quarkus you can read [this blog post](https://developer.okta.com/blog/2020/04/08/kafka-streams).
 
-[Quarkus's OpenID Connect Adapter](https://quarkus.io/guides/security-openid-connect)
+[Quarkus's OpenID Connect Adapter]: https://quarkus.io/guides/security-openid-connect
 [OIDC Web Application Setup Instructions]: https://developer.okta.com/authentication-guide/implementing-authentication/auth-code#1-setting-up-your-application
 [Authorization Code Flow]: https://developer.okta.com/authentication-guide/implementing-authentication/auth-code
