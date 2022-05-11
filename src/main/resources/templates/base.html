@@ -10,23 +10,35 @@
 </head>
 <body id="samples">
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- todo: figure out how to get the path from Qute and add 'active' to the links below -->
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                {#if user}
+                <li class="nav-item">
+                    <li><a class="nav-link" id="profile-link" href="/profile">My Profile</a></li>
+                </li>
+                {/if}
+            </ul>
             {#if user}
-            <li><a id="profile-button" href="/profile">My Profile</a></li>
+            <form method="post" action="/logout" class="d-flex mb-2 mb-lg-0">
+                <button id="logout-button" type="submit" class="btn btn-danger">Logout</button>
+            </form>
             {/if}
-        </ul>
-        {#if user}
-        <form method="post" action="/logout" class="navbar-form navbar-right">
-            <button id="logout-button" type="submit" class="btn btn-danger">Logout</button>
-        </form>
-        {/if}
+        </div>
     </div>
 </nav>
 
-<div id="content" class="container">
+<div id="content" class="container pt-3">
     {#insert body}empty page{/}
 </div>
 </body>

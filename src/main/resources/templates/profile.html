@@ -19,10 +19,13 @@
         <tbody>
         <tr>
         {#each claims}
+            <!-- don't show raw token because it makes the table too wide -->
+            {#if it.key != 'raw_token'}
             <tr>
                 <td>{it.key}</td>
                 <td>{it.value}</td>
             </tr>
+            {/if}
         {/each}
         </tbody>
     </table>
