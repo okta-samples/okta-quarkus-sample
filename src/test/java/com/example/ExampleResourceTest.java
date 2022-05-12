@@ -16,6 +16,6 @@ public class ExampleResourceTest {
         given()
                 .when().get("/profile")
                 .then()
-                .statusCode(403);
+                .statusCode(401);
     }
 }
