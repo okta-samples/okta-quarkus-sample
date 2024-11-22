@@ -8,7 +8,7 @@ It also shows how to return the user's information from an API using an OAuth 2.
 
 Before running this sample, you will need the following:
 
-* [Java 11+](https://sdkman.io/jdks)
+* [Java 17+](https://sdkman.io/jdks)
 * [The Okta CLI Tool](https://github.com/okta/okta-cli/#installation)
 * An Okta Developer Account, create one using `okta register`, or configure an existing one with `okta login`
 
@@ -23,6 +23,10 @@ git clone https://github.com/okta-samples/okta-quarkus-sample.git
 cd okta-quarkus-sample
 okta start
 ```
+
+## Enable Refresh Token
+
+Sign into your [Okta Developer Edition account](https://developer.okta.com/login/) to add a required setting to your Quarkus Okta app to avoid third-party cookies. Navigate to **Applications** > **Applications** and select "okta-quarkus-sample" application to edit. Find the **General Settings** and press **Edit**. Enable **Refresh Token** in the **Grant type** section. **Save** your changes.
 
 ## Run the Example
 
