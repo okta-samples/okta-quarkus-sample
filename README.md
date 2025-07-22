@@ -23,14 +23,16 @@ Before running this sample, you will need the following:
 7. In the **Controlled access** section, select the appropriate access level
 8. Click **Save**
 
-### Where are my new app's credentials?
-
 Creating an OIDC Web App manually in the Admin Console configures your Okta Org with the application settings. You may also need to configure trusted origins for `http://localhost:8080` in **Security > API > Trusted Origins**.
 
-After creating the app, you can find the configuration details on the app’s **General** tab:
-- **Client ID:** Found in the **Client Credentials** section
-- **Client Secret:** Click **Show** in the **Client Credentials** section to reveal
-- **Issuer:** Found in the **Issuer URI** field for the authorization server that appears by selecting **Security > API** from the navigation pane.
+## Get the Code
+
+```bash
+git clone https://github.com/okta-samples/okta-quarkus-sample.git
+cd okta-quarkus-sample
+```
+
+Update your `.env` file with the values from your application's configuration:
 
 ```text
 ISSUER=https://dev-133337.okta.com
@@ -38,17 +40,12 @@ CLIENT_ID=0oab8eb55Kb9jdMIr5d6
 CLIENT_SECRET=NEVER-SHOW-SECRETS
 ```
 
-## Get the Code
+### Where are my new app's credentials?
 
-Grab and configure this project using `okta start quarkus`.
-
-You can also clone this repo and run `okta start` in it.
-
-```bash
-git clone https://github.com/okta-samples/okta-quarkus-sample.git
-cd okta-quarkus-sample
-okta start
-```
+After creating the app, you can find the configuration details on the app’s **General** tab:
+- **Client ID:** Found in the **Client Credentials** section
+- **Client Secret:** Click **Show** in the **Client Credentials** section to reveal
+- **Issuer:** Found in the **Issuer URI** field for the authorization server that appears by selecting **Security > API** from the navigation pane.
 
 ## Enable Refresh Token
 
